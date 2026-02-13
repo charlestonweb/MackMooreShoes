@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mack Moore Shoes | Charleston, Illinois</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mack Moore Shoes in Charleston, Illinois – family-owned shoe store specializing in proper fit, work boots, everyday comfort footwear, and diabetic/prosthetic-friendly options." />
+  <style>
+    :root {
+      --mm-gold: #c9a54b;
+      --mm-brown: #4b2e1a;
+      --mm-cream: #f7f3eb;
+      --mm-dark: #222222;
+      --mm-accent: #3478f6;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--mm-dark);
+      background-color: #ffffff;
+      line-height: 1.5;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      background-color: var(--mm-dark);
+      color: #ffffff;
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 2px solid var(--mm-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    nav a {
+      opacity: 0.9;
+    }
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .cta-nav {
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--mm-gold);
+      background-color: var(--mm-gold);
+      color: var(--mm-dark);
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .cta-nav:hover {
+      background-color: #e1c066;
+    }
+    main {
+      padding-bottom: 3rem;
+    }
+    section {
+      padding: 3rem 0;
+    }
+    .section-muted {
+      background-color: var(--mm-cream);
+    }
+    .section-tight {
+      padding: 2.25rem 0;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .hero {
+      padding: 2.75rem 0 2.75rem;
+      background: linear-gradient(135deg, #17130c 0%, #3b2b18 40%, #7f5a23 100%);
+      color: #ffffff;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.7fr);
+      gap: 2rem;
+      align-items: center;
+    }
+    .hero-kicker {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #f6e2b5;
+      margin-bottom: 0.8rem;
+    }
+    .hero-subtitle {
+      font-size: 0.98rem;
+      max-width: 30rem;
+      opacity: 0.95;
+      margin-bottom: 1rem;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.3rem;
+    }
+    .badge {
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+    .badge-pill {
+      background-color: #f6e2b5;
+      color: #3b2b18;
+      border-color: transparent;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background-color: #2ecc71;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .btn-primary {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background-color: var(--mm-gold);
+      color: var(--mm-dark);
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: #e1c066;
+    }
+    .btn-ghost {
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .btn-ghost:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .hero-note {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+    .hero-card {
+      background-color: #f7f3eb;
+      color: #312015;
+      border-radius: 1rem;
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+    .hero-card-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+    }
+    .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .rating-stars {
+      color: #f4b000;
+      font-size: 0.9rem;
+    }
+    .rating-source {
+      font-size: 0.75rem;
+      color: #7a664b;
+    }
+    .hero-card-body {
+      font-size: 0.82rem;
+      color: #5a4a36;
+      margin-bottom: 0.8rem;
+    }
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+    .pill {
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      background-color: #e5d8c2;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .section-intro {
+      max-width: 34rem;
+      font-size: 0.96rem;
+      margin-bottom: 1.5rem;
+    }
+    .list-check {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+    }
+    .list-check li::before {
+      content: "✔";
+      color: var(--mm-brown);
+      margin-right: 0.4rem;
+      font-size: 0.8rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .card {
+      border-radius: 0.8rem;
+      border: 1px solid #e0d6c4;
+      background-color: #ffffff;
+      padding: 1rem 1.1rem;
+    }
+    .card-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8a7355;
+      margin-bottom: 0.4rem;
+    }
+    .brands-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    .brand-category-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: #7a5c38;
+      margin-bottom: 0.35rem;
+    }
+    .brand-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .brand-tag {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #dac9ac;
+      background-color: #fffaf1;
+      white-space: nowrap;
+    }
+    .info-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+      font-size: 0.9rem;
+    }
+    .info-box {
+      border-radius: 0.8rem;
+      border: 1px solid #e0d6c4;
+      padding: 1rem 1.1rem;
+      background-color: #ffffff;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .hours-table td {
+      padding: 0.18rem 0;
+    }
+    .hours-table td:first-child {
+      font-weight: 600;
+      padding-right: 0.6rem;
+    }
+    .map-embed {
+      width: 100%;
+      min-height: 220px;
+      border-radius: 0.8rem;
+      border: none;
+    }
+    .visit-note {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #5b4b37;
+    }
+    footer {
+      background-color: #15100b;
+      color: #f2e4cf;
+      font-size: 0.78rem;
+      padding: 1.2rem 0;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      .hero-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+      }
+      header {
+        position: static;
+      }
+      .hero {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-row">
+      <div class="logo-lockup">
+        <div class="logo-circle">MM</div>
+        <div>
+          <div style="font-weight:600; font-size:0.95rem;">Mack Moore Shoes</div>
+          <div style="font-size:0.78rem; opacity:0.85;">Family-owned footwear &amp; fitting since 1919</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#brands">Brands</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#hours">Hours</a>
+        <a href="#visit">Visit</a>
+        <button class="cta-nav" onclick="window.location.href='tel:+12173453479'">Call (217) 345‑3479</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-kicker">Charleston, Illinois</div>
+          <h1>Properly fitted shoes for real life, work, and walking comfort.</h1>
+          <p class="hero-subtitle">
+            Mack Moore Shoes helps you find the right fit for your feet – from work boots and walking shoes to sandals and diabetic/prosthetic‑friendly footwear.
+          </p>
+          <div class="hero-badges">
+            <div class="badge badge-pill">
+              <span class="badge-dot"></span>
+              <span>4.8 ★ rating · 83 Google reviews</span>
+            </div>
+            <div class="badge">
+              Expert fitting • Diabetic &amp; prosthetic customers welcome
+            </div>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="window.location.href='#visit'">Get directions</button>
+            <button class="btn-ghost" onclick="window.location.href='tel:+12173453479'">Call the store</button>
+          </div>
+          <p class="hero-note">
+            Walk in, tell us what your feet are dealing with, and we’ll pull options that actually fit – not just what’s on the rack.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-heading">
+            <div>
+              <div class="rating-row">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.8 out of 5</span>
+              </div>
+              <div class="rating-source">Based on 83 Google reviews</div>
+            </div>
+            <div class="pill">Family-owned · Local</div>
+          </div>
+          <div class="hero-card-body">
+            Customers mention friendly, knowledgeable staff who take time to measure, adjust, and find the right shoe – especially for hard‑to‑fit and medical needs.
+          </div>
+          <div class="hero-card-footer">
+            <span>“Best shoe store around for work boots and everyday comfort.”</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-muted section-tight">
+      <div class="container two-col">
+        <div>
+          <h2>Why people drive to Mack Moore Shoes</h2>
+          <p class="section-intro">
+            This is not a big box shoe store. Mack Moore is a sit‑and‑fit store – you get measured, fitted, and matched with brands that actually support how you move and work.
+          </p>
+          <ul class="list-check">
+            <li>Family-owned, local Charleston business</li>
+            <li>Full service fitting – we measure and adjust</li>
+            <li>Work boots, casual, dress, sandals, and more</li>
+            <li>Options for diabetes, prosthetics, and sensitive feet</li>
+            <li>Quality socks, insoles, and leather bags</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">Fit &amp; comfort focused</div>
+          <h3>We specialize in hard‑to‑fit feet.</h3>
+          <p style="font-size:0.9rem; margin-top:0.4rem;">
+            If you struggle with off‑the‑shelf shoes, we work with brands and styles that give more depth, support, and stability. Many customers with diabetes or prosthetics rely on Mack Moore to keep them walking comfortably.
+          </p>
+          <p style="font-size:0.9rem; margin-top:0.6rem;">
+            For workplaces and larger crews, Mack Moore can also bring a mobile truck to your company site on a scheduled date so employees can be fitted and buy work shoes on‑site by appointment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>What we help with in the store</h2>
+        <div class="card-grid" style="margin-top:1rem;">
+          <div class="card">
+            <div class="card-tag">Work &amp; safety</div>
+            <h3>Work boots that last</h3>
+            <p>
+              Steel toe, composite toe, slip‑resistant, waterproof, and insulated boots from trusted brands so your feet are protected all shift long.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Everyday &amp; walking</div>
+            <h3>Comfort for all‑day wear</h3>
+            <p>
+              Walking and lifestyle shoes with real cushioning and support – ideal for people on their feet, college campus walking, and everyday use.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Medical &amp; support</div>
+            <h3>Diabetic &amp; prosthetic‑friendly</h3>
+            <p>
+              Depth, width, and cushioning options that work with diabetic needs, braces, and prosthetics, plus socks and insoles made for sensitive feet.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Accessories</div>
+            <h3>Socks, insoles, &amp; leather goods</h3>
+            <p>
+              Quality socks for hiking and lifestyle, comfort insoles, and leather bags and wallets to go with your footwear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brands" class="section-muted">
+      <div class="container">
+        <h2>Brands you’ll find at Mack Moore</h2>
+        <p class="section-intro">
+          Mack Moore carries a deep selection of trusted brands for work, walking, athletic, comfort, and dress shoes – so you can try them on in person instead of guessing online.
+        </p>
+
+        <div class="brands-wrap">
+          <div>
+            <div class="brand-category-title">Work &amp; safety footwear</div>
+            <div class="brand-tags">
+              <span class="brand-tag">Wolverine</span>
+              <span class="brand-tag">Timberland PRO</span>
+              <span class="brand-tag">Georgia Boot</span>
+              <span class="brand-tag">Keen Utility</span>
+              <span class="brand-tag">Reebok Work</span>
+              <span class="brand-tag">Puma Safety</span>
+              <span class="brand-tag">Skechers Work</span>
+              <span class="brand-tag">Tingley</span>
+              <span class="brand-tag">Thorogood</span>
+              <span class="brand-tag">DC</span>
+              <span class="brand-tag">Harley Davidson</span>
+              <span class="brand-tag">Double H</span>
+              <span class="brand-tag">Red Wing</span>
+              <span class="brand-tag">Carolina</span>
+              <span class="brand-tag">Carhartt</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="brand-category-title">Walking, athletic, comfort &amp; dress</div>
+            <div class="brand-tags">
+              <span class="brand-tag">New Balance</span>
+              <span class="brand-tag">Topo Athletic</span>
+              <span class="brand-tag">Merrell</span>
+              <span class="brand-tag">Vionic</span>
+              <span class="brand-tag">SAS</span>
+              <span class="brand-tag">Drew</span>
+              <span class="brand-tag">Born</span>
+              <span class="brand-tag">Florsheim</span>
+              <span class="brand-tag">Spring Step</span>
+              <span class="brand-tag">Aetrex</span>
+              <span class="brand-tag">Skechers</span>
+              <span class="brand-tag">Keen</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="brand-category-title">Sandals, moccasins &amp; casual</div>
+            <div class="brand-tags">
+              <span class="brand-tag">Birkenstock</span>
+              <span class="brand-tag">Minnetonka</span>
+              <span class="brand-tag">ECCO</span>
+              <span class="brand-tag">Dansko</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="brand-category-title">Socks &amp; accessories</div>
+            <div class="brand-tags">
+              <span class="brand-tag">Darn Tough</span>
+              <span class="brand-tag">OS1st</span>
+              <span class="brand-tag">Milo leather bags</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+      <div class="container">
+        <h2>What local customers say</h2>
+        <p class="section-intro">
+          With a 4.8 average rating from 83 Google reviews, Mack Moore Shoes is known for friendly service, patient fitting, and long‑lasting footwear.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-tag">Google review highlight</div>
+            <h3>“They actually measure your feet.”</h3>
+            <p>
+              Many reviews mention how nice it is to have someone measure, fit, and adjust shoes instead of guessing sizes off the shelf.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Work boots</div>
+            <h3>“Best place for durable work boots.”</h3>
+            <p>
+              Local trades and workers trust Mack Moore for boots that hold up – with in‑person help choosing the right safety features.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Comfort &amp; medical needs</div>
+            <h3>“Huge help with my foot issues.”</h3>
+            <p>
+              Customers with foot pain, diabetes, and prosthetics call out the staff for going the extra mile to get the fit right.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours & Contact -->
+    <section id="hours" class="section-muted section-tight">
+      <div class="container info-row">
+        <div class="info-box">
+          <h3>Store hours</h3>
+          <table class="hours-table" aria-label="Store hours">
+            <tbody>
+              <tr><td>Monday</td><td>9:00 am – 6:00 pm</td></tr>
+              <tr><td>Tuesday</td><td>9:00 am – 6:00 pm</td></tr>
+              <tr><td>Wednesday</td><td>9:00 am – 6:00 pm</td></tr>
+              <tr><td>Thursday</td><td>9:00 am – 6:00 pm</td></tr>
+              <tr><td>Friday</td><td>9:00 am – 6:00 pm</td></tr>
+              <tr><td>Saturday</td><td>9:00 am – 4:00 pm</td></tr>
+              <tr><td>Sunday</td><td>12:00 pm – 4:00 pm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box">
+          <h3>Contact &amp; questions</h3>
+          <p>
+            Call <a href="tel:+12173453479">(217) 345‑3479</a> during store hours and a real person will pick up the phone at the counter.
+          </p>
+          <p style="margin-top:0.4rem;">
+            Address: 305 W Lincoln Ave, Charleston, IL 61920
+          </p>
+          <p style="margin-top:0.4rem; font-size:0.86rem;">
+            Tip: Bring your current shoes or orthotics so we can see what has and hasn’t been working for you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section id="visit">
+      <div class="container two-col">
+        <div>
+          <h2>Visit Mack Moore Shoes</h2>
+          <p class="section-intro">
+            The store is on Lincoln Avenue in Charleston, just a short drive from Eastern Illinois University and downtown.
+          </p>
+          <ul class="list-check">
+            <li>Easy street parking near the front door</li>
+            <li>Sit‑and‑fit service – we bring sizes to you</li>
+            <li>Try on multiple brands before you decide</li>
+          </ul>
+        </div>
+        <div>
+          <iframe
+            class="map-embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3094.977288890764!2d-88.18711432364054!3d39.48469987161108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8876c9a5a9b3a1f3%3A0xefaef2dbd9f7b87e!2sMack%20Moore%20Shoes!5e0!3m2!1sen!2sus!4v1707510000000">
+          </iframe>
+          <p class="visit-note">
+            Tap “View larger map” in the corner for step‑by‑step directions from your phone.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Mack Moore Shoes • 305 W Lincoln Ave, Charleston, IL 61920 • (217) 345‑3479 • Family-owned footwear and fitting in Charleston, Illinois.
+    </div>
+  </footer>
+</body>
+</html>
